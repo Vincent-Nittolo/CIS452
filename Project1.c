@@ -1,9 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-#ifndef LAB3_C
-#define LAB3_C
-
 struct node 
 {
 	int data;
@@ -50,7 +47,6 @@ void deleteAll (struct node *head){
 
  //delete the entire linked list including the head node
 
-#endif
 
 int main()
 {
