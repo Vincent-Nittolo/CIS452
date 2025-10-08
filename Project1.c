@@ -66,9 +66,8 @@ int main() {
     getchar();
     while (1) {
         printf("Enter a message: ");
-        fgets(message, sizeof(message), stdin); 
-
-        
+        fgets(message, sizeof(message), stdin);  
+        message[strcspn(message, "\n")] = '\0';
         printf("Select a PID: ");
         scanf("%d", &value);
         getchar();
@@ -85,7 +84,7 @@ int main() {
 
 void sigHandler(int sigNum) {
 if (sigNum == SIGUSR1) {
-    printf("Received a signal One.\n");
+    printf("Ready To send a message!\n");
 }
 
 else {
